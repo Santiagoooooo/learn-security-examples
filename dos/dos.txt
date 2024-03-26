@@ -1,2 +1,19 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+The insecure code is vulnerable to NoSQL injection attacks because it directly uses the user-provided id value in the MongoDB query without proper validation or sanitization. 
+An attacker can manipulate the id parameter to inject malicious NoSQL queries and retrieve sensitive information or perform unauthorized actions.
+
+The secure version attempts to prevent this vulnerability by wrapping the query inside a try-catch block. However, this alone is not sufficient to completely prevent NoSQL injection attacks.
+
+To enhance security and prevent NoSQL injection attacks, the following mechanisms can be incorporated:
+
+1.Input validation and sanitization
+2.Parameterized queries or ORM
+3.Least privilege principle
+4.Input length limitation
+5.Regular security updates
+6.Logging and monitoring
+
+These security measures help reduce the risk of NoSQL injection attacks and protect sensitive user information stored in the database. 
+It's important to note that the provided secure version does not fully address the vulnerability, and additional input validation, sanitization, and the use of parameterized queries or an ORM should be implemented for proper mitigation.

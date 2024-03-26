@@ -1,1 +1,12 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+The insecure version of the code is vulnerable to session hijacking and cross-site request forgery (CSRF) attacks. 
+Session hijacking is possible because the session cookie is accessible to client-side JavaScript, allowing attackers to steal the cookie and gain unauthorized access. 
+CSRF attacks can be performed by creating malicious HTML pages that automatically submit forms to the vulnerable server.
+
+Spoofing violates the confidentiality and integrity of the system by allowing attackers to impersonate users and perform unauthorized actions.
+
+The secure version prevents these vulnerabilities by setting httpOnly: true and sameSite: true for the session cookie, restricting client-side JavaScript access and limiting the cookie to same-site requests. 
+It also uses a secure secret key for session encryption.
+
+These security measures help protect against session hijacking and CSRF attacks, ensuring the confidentiality and integrity of user sessions and data.

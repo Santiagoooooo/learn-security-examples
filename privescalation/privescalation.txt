@@ -1,0 +1,14 @@
+The insecure code is vulnerable to privilege escalation attacks because the /update-role route allows any user to update the role of any other user without proper authorization checks. An attacker with a 'user' role can exploit this vulnerability to gain unauthorized privileges by updating their own or another user's role to 'admin'.
+
+The secure version prevents this vulnerability by implementing session-based authentication and authorization. It checks if the user is authenticated using req.session.userId and verifies if the logged-in user has the 'admin' role before allowing them to update the role of another user.
+
+To further enhance security and prevent privilege escalation attacks, additional mechanisms can be incorporated:
+
+1.Granular access control
+2.Input validation and sanitization
+3.Secure session management
+4.Audit logging
+5.Two-factor authentication (2FA)
+6.Regular security updates
+
+These security measures help reduce the risk of privilege escalation attacks and ensure that users can only perform actions within their authorized scope.

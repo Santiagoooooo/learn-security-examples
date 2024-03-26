@@ -1,3 +1,18 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 Which CIA property does tampering violate?
 What additional security mechanisms can you incorporate?
+
+The insecure code is vulnerable to NoSQL injection attacks due to the lack of input sanitization and validation. The secure version prevents this vulnerability by validating and sanitizing the user-provided username input, ensuring it is a string and removing non-alphanumeric characters.
+
+Tampering violates the integrity property of the CIA triad by allowing unauthorized modification or manipulation of data, compromising its accuracy and reliability.
+
+To enhance security, additional mechanisms can be incorporated, including:
+
+1.Strict input validation and sanitization
+2.Parameterized queries or prepared statements
+3.Robust authentication and authorization
+4.Secure communication using HTTPS
+5.Proper error handling and logging
+6.Regular security updates for dependencies and server software
+
+By implementing these security measures, the application's overall security posture can be significantly improved, reducing the risk of vulnerabilities and protecting sensitive user information.

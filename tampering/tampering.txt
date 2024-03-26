@@ -1,0 +1,7 @@
+The insecure version of the code is vulnerable to cross-site scripting (XSS) attacks because it directly assigns user input from the registration form to req.session.user without sanitization or validation. 
+This allows attackers to inject malicious JavaScript code, which will be reflected back on the home page and executed in other users' browsers, potentially stealing sensitive information or performing unauthorized actions.
+
+The secure version prevents this vulnerability by implementing input sanitization using the escapeHTML function. It replaces special characters in the user input with their corresponding HTML entities, neutralizing any potential malicious code. 
+This mitigates the risk of XSS attacks and ensures the integrity of the rendered content.
+
+Tampering violates the integrity property of the CIA triad by allowing attackers to modify or manipulate data in an unauthorized manner, compromising the intended behavior of the application.
