@@ -1,2 +1,17 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+The insecure version is vulnerable to non-repudiation issues because it lacks authentication and logging mechanisms. Messages can be sent and retrieved anonymously, making it difficult to prove who performed certain actions.
+
+The secure version addresses non-repudiation by implementing authentication and logging. It requires users to be authenticated before sending and retrieving messages. Additionally, it logs important events such as requests, message sending, and message retrieval, along with timestamps and user information. These logs provide an audit trail and help establish non-repudiation.
+
+To further enhance security and prevent non-repudiation, additional mechanisms can be incorporated:
+
+1. Digital signatures for message integrity and authenticity
+2. Secure timestamps to establish the sequence of events
+3. Secure communication protocols like HTTPS for data encryption
+4. Granular access controls to restrict access based on roles or permissions
+5. Multi-factor authentication (MFA) for an additional layer of security
+6. Regular security audits to identify vulnerabilities and ensure system integrity
+
+By implementing these security measures, the secure version significantly improves the prevention of non-repudiation compared to the insecure version. It establishes accountability, provides an audit trail, and ensures that actions can be attributed to specific authenticated users.
